@@ -1,0 +1,48 @@
+{
+  "parameters": {
+    "packages": []
+  },
+  "storage": {
+    "input": {
+      "files": [
+        {
+          "source": {
+            "tags": [
+              {
+                "name": "artifact"
+              },
+              {
+                "name": "branchId-15940"
+              },
+              {
+                "name": "componentId-keboola.dbt-transformation"
+              },
+              {
+                "name": "configId-65465055"
+              }
+            ]
+          },
+          "query": "artifacts.tar.gz",
+          "limit": 1
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-artifact-parser.test_log",
+          "source": "test_log.csv",
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": [],
+          "primary_key": [
+            "invocation_id",
+            "generated_at",
+            "unique_id"
+          ]
+        }
+      ]
+    }
+  }
+}

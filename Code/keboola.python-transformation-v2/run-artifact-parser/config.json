@@ -1,0 +1,119 @@
+{
+  "parameters": {
+    "packages": []
+  },
+  "storage": {
+    "input": {
+      "files": [
+        {
+          "limit": 1,
+          "source": {
+            "tags": [
+              {
+                "name": "artifact"
+              },
+              {
+                "name": "branchId-15940"
+              },
+              {
+                "name": "componentId-keboola.dbt-transformation"
+              },
+              {
+                "name": "configId-65241962"
+              }
+            ]
+          },
+          "query": "run_results.json"
+        },
+        {
+          "limit": 1,
+          "source": {
+            "tags": [
+              {
+                "name": "artifact"
+              },
+              {
+                "name": "branchId-15940"
+              },
+              {
+                "name": "componentId-keboola.dbt-transformation"
+              },
+              {
+                "name": "configId-65241962"
+              }
+            ]
+          },
+          "query": "manifest.json"
+        },
+        {
+          "limit": 1,
+          "source": {
+            "tags": [
+              {
+                "name": "artifact"
+              },
+              {
+                "name": "branchId-15940"
+              },
+              {
+                "name": "componentId-keboola.dbt-transformation"
+              },
+              {
+                "name": "configId-65241962"
+              }
+            ]
+          },
+          "query": "model_timing.json"
+        },
+        {
+          "source": {
+            "tags": [
+              {
+                "name": "artifact"
+              },
+              {
+                "name": "branchId-15940"
+              },
+              {
+                "name": "componentId-keboola.dbt-transformation"
+              },
+              {
+                "name": "configId-65241962"
+              }
+            ]
+          },
+          "query": "dbt.log",
+          "limit": 1
+        }
+      ]
+    },
+    "output": {
+      "tables": [
+        {
+          "destination": "out.c-artifact-parser.dbt_log",
+          "source": "dbt_log.csv",
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": [],
+          "primary_key": [
+            "timestamp",
+            "invocation_id"
+          ]
+        },
+        {
+          "destination": "out.c-artifact-parser.model_timing",
+          "source": "model_timing.csv",
+          "incremental": true,
+          "delete_where_column": "",
+          "delete_where_operator": "eq",
+          "delete_where_values": [],
+          "primary_key": [
+            "filename",
+            "id"
+          ]
+        }
+      ]
+    }
+  }
+}
