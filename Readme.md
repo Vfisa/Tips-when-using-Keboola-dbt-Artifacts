@@ -1,14 +1,14 @@
 ## Introduction
 
-This is an example how Keboola users cn build on the top of Artifacts within the platform, specifically aiming for `dbt` users.
+This is an example how Keboola users can build on the top of artifacts within the platform, specifically aiming for `dbt` users.
 
-First of all, Keboola documentation and developers docs provide a lot of information regarding [Artifacts](https://developers.keboola.com/integrate/artifacts/), including the [tutorial](https://developers.keboola.com/integrate/artifacts/tutorial/) as well. 
+First of all, Keboola documentation and developers docs provide a lot of information regarding [artifacts](https://developers.keboola.com/integrate/artifacts/), including the [tutorial](https://developers.keboola.com/integrate/artifacts/tutorial/) as well. 
 
 *Disclaimer: Code used does not aspire to be 100% pythonic code, nor the best coding possible. I am not a pro :)*
 
-## What are the dbt Artifacts?
+## What are the dbt artifacts?
 
-The platform introduced Artifacts at the same time as `dbt` support - to facilitate files produced by frameworks like `dbt`, as it is known those files can be leveraged to produce further insights in the dbt run.   
+The platform introduced artifacts at the same time as `dbt` support - to facilitate files produced by frameworks like `dbt`, as it is known those files can be leveraged to produce further insights in the dbt run.   
 
 In a fact, Keboola UI uses them to draw the model timing chart and also hosts the documentation:   
 ![Keboola Model Timing UI](/Images/Keboola_dbt_image_01.png)
@@ -47,7 +47,7 @@ In a nutshell, the trick is to set up correct file input mapping and then parse 
 
 
 ## Conclusion
-Thats all! Check out the scripts and happy coding! If you want, share with me what you have build on the top of artifacts!
+Thats all! Check out the scripts in the `/Code` folder. If you can, please share with me what you have build on the top of artifacts!
 
 
 ## Tips
